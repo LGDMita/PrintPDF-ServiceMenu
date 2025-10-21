@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KonqPopupMenu/Plugin
+MimeType=application/pdf;
+Actions=printPDF;
+Icon=printer
+
+[Desktop Action printPDF]
+Name=Print PDF with Options
+Exec=/usr/local/bin/print_pdf.sh %F
+Icon=printer
