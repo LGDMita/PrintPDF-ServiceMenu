@@ -3,7 +3,7 @@ Type=Service
 ServiceTypes=KonqPopupMenu/Plugin
 MimeType=application/pdf;
 Actions=printPDF;
-Icon=printer
+X-KDE-Priority=TopLevel
 
 [Desktop Action printPDF]
 Name=Print PDF with Options

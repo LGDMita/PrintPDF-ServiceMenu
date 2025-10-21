@@ -1,16 +1,17 @@
 # Print PDF Service Menu for KDE
 
-This package provides a **Dolphin Service Menu** to print PDF files with **color and duplex options** using KDE-native dialogs (`kdialog`). It works on any Linux distribution with KDE Plasma.
+This package provides a **Dolphin Service Menu** for printing PDF files on KDE Plasma with **mandatory color and duplex selection**, while keeping the printer’s default settings for everything else (paper size, margins, scaling, autofit, etc.).
 
 ---
 
 ## Features
 
-- Select printer if multiple are available
-- Choose **Color** or **Black & White**
-- Choose **Duplex** (front/back) or **Single-sided**
-- Fully KDE style (`kdialog`), no GNOME dialogs
-- Automatic installation via `install.sh`
+- Select printer if multiple are available (automatically uses the only printer if there’s just one)  
+- Mandatory selection of **Color** or **Black & White**  
+- Mandatory selection of **Duplex** (front/back) or **Single-sided**  
+- Keeps all other printer defaults intact (no forced scaling, margins, or page fitting)  
+- Fully KDE style dialogs using `kdialog` (no GNOME dialogs)  
+- Automatic installation via `install.sh`  
 
 ---
 
