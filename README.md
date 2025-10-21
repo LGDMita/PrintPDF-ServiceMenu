@@ -29,7 +29,7 @@ cd PrintPDF-ServiceMenu
 chmod +x install.sh
 ./install.sh
 ```
-- The service menu will be installed in `~/.local/share/kservices5/ServiceMenus/`
+- The service menu will be installed in `~/.local/share/kio/servicemenus`
 - The script will be installed in `~/.local/bin/` (for non-root users) or `/usr/local/bin/`(if root)
 - Make sure `print_pdf.sh` is executable (`chmod +x`)
 

@@ -2,10 +2,12 @@
 Type=Service
 ServiceTypes=KonqPopupMenu/Plugin
 MimeType=application/pdf;
+Icon=printer
 Actions=printPDF;
+X-KDE-StartupNotify=false
 X-KDE-Priority=TopLevel
 
 [Desktop Action printPDF]
-Name=Print PDF with Options
-Exec=/usr/local/bin/print_pdf.sh %F
+Name=Print PDFs
 Icon=printer
+Exec=/usr/local/bin/print_pdf.sh %F
