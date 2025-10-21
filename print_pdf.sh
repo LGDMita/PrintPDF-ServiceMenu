@@ -12,14 +12,32 @@ fi
 if [ "${#printers[@]}" -eq 1 ]; then
     printer="${printers[0]}"
 else
-    printer=$(kdialog --title "Print PDFs" --combobox "Select printer:" "${printers[@]}" --no-cancel)
+    while true; do
+        printer=$(kdialog --title "Print PDFs" --combobox "Select printer:" "${printers[@]}")
+        if [ -n "$printer" ]; then
+            break
+        fi
+        kdialog --title "Print PDFs" --sorry "You must select a printer to proceed."
+    done
 fi
 
 # Select color mode (mandatory)
-color_choice=$(kdialog --title "Print PDFs" --combobox "Color mode:" "Color" "Black & White" --no-cancel)
+while true; do
+    color_choice=$(kdialog --title "Print PDFs" --combobox "Color mode:" "Color" "Black & White")
+    if [ -n "$color_choice" ]; then
+        break
+    fi
+    kdialog --title "Print PDFs" --sorry "You must select a color mode."
+done
 
 # Select duplex mode (mandatory)
-duplex_choice=$(kdialog --title "Print PDFs" --combobox "Print type:" "Duplex" "Single-sided" --no-cancel)
+while true; do
+    duplex_choice=$(kdialog --title "Print PDFs" --combobox "Print type:" "Duplex" "Single-sided")
+    if [ -n "$duplex_choice" ]; then
+        break
+    fi
+    kdialog --title "Print PDFs" --sorry "You must select a print type."
+done
 
 # Build lp options
 lp_opts=""
